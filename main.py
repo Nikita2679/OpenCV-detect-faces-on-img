@@ -1,10 +1,10 @@
 import cv2
 import numpy as np
 
-img = cv2.imread(r'C:\Users\nzanosiev\Desktop\Nikita\py\12.18\OpenCV\vid7\images\face4.jpg')
+img = cv2.imread('\images\face4.jpg')
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
-faces = cv2.CascadeClassifier(r'C:\Users\nzanosiev\Desktop\Nikita\py\12.18\OpenCV\vid7\faces.xml')
+faces = cv2.CascadeClassifier('faces.xml')
 
 results = faces.detectMultiScale(gray, scaleFactor=1.3, minNeighbors=6)
 
